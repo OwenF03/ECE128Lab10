@@ -13,7 +13,7 @@ module Multiplier(input wire clk, input wire rst, input wire clear_mem, input wi
     wire SA, SB, DA, w_rf, w_ram; //Control signals
     
     //Define modules (control, register file, rom, ram and multiplier)
-    cu control_unit(.clk(clk), .reset(rst), .adr1(ra1), .adr2(ra2), .dest_addr(dest_adr), .w_rf(w_rf), .adr(adr_out),
+    cu control_unit(.clk(clk), .reset(rst), .adr1(ra1), .adr2(ra2), .dest_adr(dest_adr), .w_rf(w_rf), .adr(adr_out),
                 .DA(DA), .SA(SA), .SB(SB), .st_out(state_out), .w_ram(w_ram)); 
     RF reg_file(.A(A), .B(B), .SA(SA), .SB(SB), .D(rom_data), .DA(DA), .W(w_rf), .rst(rst), .clk(clk)); 
     ROM rom(.address(adr_out), .read_data(rom_data)); 
