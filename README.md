@@ -17,4 +17,6 @@ Simulation sources : Multiplier_tb.v (testbench for system)
 
 Memory sources: mem.h (hex file containing instructions to be read by ROM module)
 
+**MAKE SURE MEM.H IS STORED IN THE SAME DIRECTORY AS ROM.V**
+
 Constraints : None, this module is not deployed to an FPGA board
